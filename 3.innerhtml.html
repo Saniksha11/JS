@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showmsg()
+        {
+            //object refering to viewport
+            document.write("Welcome we are printing on view port");//overwrites the page
+
+        }
+        function showmsg1()
+        {
+            document.getElementById("result").innerHTML="Welcome printed on same page";
+        }
+
+    </script>
+</head>
+<body>
+    <input type="submit" value="click me" onclick="showmsg1()"> 
+    <br>
+<br>
+
+    <!-- <span id="result">This is where output will be show</span> -->
+    <!-- <span id="result"></span> -->
+    <h1 id="result"></h1>
+</body>
+</html>

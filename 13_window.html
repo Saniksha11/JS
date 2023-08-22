@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+    <script>
+        var url;
+        function openwind()
+        {
+           url= open("https://www.google.com");
+        }
+        function closewind()
+        {
+           setTimeout(demo,1000);//milisec
+        }
+        function demo()
+        {
+            alert("Window is closing");
+            url.close();
+            this.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="submit" value="Open window" onclick="openwind()">
+    <input type="submit" value="close window" onclick="closewind()">
+</body>
+</html>

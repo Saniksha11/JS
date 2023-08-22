@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function print()
+        {
+            a=parseInt(document.getElementById("num").value);
+
+      
+            // x =x +10
+            //
+            // x +=10
+            data="<table border=1 cellpadding=10>"
+            for(i=1;i<=10;i++)
+            {
+                data +="<tr>";
+                ans=a*i;
+                //6 * 1=6
+                col1= "<td>"+a+" *" + i+"</td>";
+                col2="<td>  = </td>";
+                col3="<td>"+ans+"</td>";                
+
+                data +=col1 +col2 + col3+"</tr>";
+            }
+            data = data+"</table>";
+            document.getElementById("result").innerHTML=data;
+        }
+
+    </script>
+</head>
+<body>
+    
+    <table border="1">
+        <tr><td> Enter number:</td>
+        <td><input type="text" id="num"></td>
+        </tr>
+        
+        <tr>
+        
+        <td><input type="Submit" value ="print table" onclick="print()">
+            
+        </td>
+    </tr>
+    
+    </table>  
+    <span id="result"></span>  
+</body>
+</html>

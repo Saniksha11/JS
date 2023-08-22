@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script>
+        //option 1
+        //JSON  JavaScript Object Notation
+        // var student ={rollno:24,name:"Akash", address:"Pune"};
+        // document.write(student.name+"<br>");
+        // document.write(student.rollno);
+
+        //option 2
+        // var product=new Object();
+        // product.pid="p101";
+        // product.name="headphone";
+        // product.brand="boat";
+        // document.write(product.brand);
+
+        //option 3 : constructor function
+        function employee(id,nm,sal)
+        {
+            this.eid=id;
+            this.ename=nm;
+            this.salary=sal;
+        }
+
+        var e1=new employee(101,"Akshay",30000);
+        document.write(e1.ename);
+        var e2=new employee(102,"Seema",45000);
+        document.write(e2.ename);
+    </script>
+</head>
+<body>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <style>
+        span{
+            color:red;
+            font-style: bold;
+        }
+      </style>
+    <script>
+      
+        function login()
+        {
+           user=document.getElementById("uname");
+           pass=document.getElementById("pass");
+          
+           if(user.value.length==0)
+           {
+              document.getElementById("uerror").innerHTML="Enter valid username";
+              document.getElementById("uname").style="border : 2px solid red ; background-color:pink" ;
+             // user.focus();
+              return
+           }
+           if(pass.value.length==0)
+           {
+            document.getElementById("perror").innerHTML="Enter valid password";
+            pass.focus();
+            return
+           }
+          myform.submit();
+        }
+        function remove()
+        {
+            user=document.getElementById("uname");
+           pass=document.getElementById("pass");
+            if(user.value.length!=0)
+            {
+                document.getElementById("uerror").innerHTML="";
+                
+            }
+            if(pass.value.length!=0)
+            {
+                document.getElementById("perror").innerHTML="";
+                
+            }
+        }
+        function show()
+        {
+            pass=document.getElementById("pass")
+            if(pass.type=="password")
+            {
+                pass.type="text";
+            }
+            else if(pass.type=="text")
+            {
+                pass.type="password";
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <form action="demo" name="myform">
+        <label>Enter username</label>
+        <input type="text" id="uname" onblur="remove()">
+        <span id="uerror"></span>
+        <br><br>
+        <label>Enter password</label>
+        <input type="password" id="pass" onblur="remove()">
+        <span id="perror"></span>
+        <br><br>
+        <input type="checkbox" onclick="show()">Show password
+        <br>
+        <br>
+      <input type="Button" value="login" onclick="login()">
+    </form>
+    
+</body>
+</html>
